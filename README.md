@@ -27,17 +27,17 @@
 
 **************************************************
 
-###Eclipse IDE
+### Eclipse IDE
 
 ![10Capture](https://user-images.githubusercontent.com/41640976/59094360-994fec00-8933-11e9-81c5-aee1514e823d.JPG)
 
 
-###Emulator Used While Testing
+### Emulator Used While Testing
 
 ![11Capture](https://user-images.githubusercontent.com/41640976/59094407-b1277000-8933-11e9-9349-a341b48742e6.JPG)
 
 
-###UI Automator Viewer [for spying the locators]
+### UI Automator Viewer [for spying the locators]
 
 ![12Capture](https://user-images.githubusercontent.com/41640976/59094470-d2885c00-8933-11e9-922f-beffa261d4b7.JPG)
 
