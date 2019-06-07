@@ -25,10 +25,10 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class CreateSession {
 
 	public static AndroidDriver<MobileElement> driver;
-	public  static Properties prop;
-	public  static FileInputStream fis;
+	public static Properties prop;
+	public static FileInputStream fis;
 	public TouchAction action;
-	
+
 	public CreateSession() {
 
 		try {
@@ -52,10 +52,10 @@ public class CreateSession {
 			serverSocket = new ServerSocket(port);
 			serverSocket.close();
 		} catch (IOException e) {
-			
+
 			// If control comes here, then it means that the port is in use
 			isServerRunning = true;
-			
+
 		} finally {
 			serverSocket = null;
 		}
@@ -80,7 +80,7 @@ public class CreateSession {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void stopServer() {
 		Runtime runtime = Runtime.getRuntime();
 		try {
@@ -89,7 +89,7 @@ public class CreateSession {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@BeforeSuite
 	public void startAppiumServer() {
 		if (checkIfServerIsRunnning(4723)) {
@@ -100,38 +100,37 @@ public class CreateSession {
 	}
 
 	@BeforeTest
-	public void launchApp() throws MalformedURLException   {
-		
+	public void launchApp() throws MalformedURLException {
+
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		
+
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
 		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 		capabilities.setCapability("deviceName", "Emulators");
-	    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-	    capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
-	    capabilities.setCapability(MobileCapabilityType.APP, prop.getProperty("app"));
-	    capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
-	    capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
-	    capabilities.setCapability("appWaitActivity", "io.selendroid.testapp.HomeScreenActivity");
-	    capabilities.setCapability("appWaitPackage", "io.selendroid.testapp");
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
+		capabilities.setCapability(MobileCapabilityType.APP, prop.getProperty("app"));
+		capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+		capabilities.setCapability(MobileCapabilityType.FULL_RESET, false);
+		capabilities.setCapability("appWaitActivity", "io.selendroid.testapp.HomeScreenActivity");
+		capabilities.setCapability("appWaitPackage", "io.selendroid.testapp");
 		capabilities.setCapability("autoGrantPermissions", true);
 
-	    
-	    driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
 
-	@AfterTest (alwaysRun=true)
+	@AfterTest(alwaysRun = true)
 	public void closeApp() throws Exception {
-	    if (driver != null) {
-	        driver.quit();
-	    }
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	@AfterSuite
 	public void stopAppiumServer() {
 		stopServer();
 	}
-	
+
 }
