@@ -27,6 +27,8 @@ public class HomeScreenTest extends CreateSession{
 		home = new HomeScreen(driver);
 		assertEquals(true, home.isENbuttonEnabled());
 	}
+	
+	
 
 	//@Test(dependsOnMethods={"clickOnTapToAddASaleButton"}, alwaysRun=true)
 	

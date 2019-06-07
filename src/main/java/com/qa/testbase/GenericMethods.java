@@ -16,7 +16,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class GenericMethods {
+public class GenericMethods extends CreateSession{
 
 	public void rightSwipe() {
 		Dimension screenSize = driver.manage().window().getSize();

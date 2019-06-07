@@ -21,6 +21,12 @@ public class HomeScreen extends CreateSession{
 	@AndroidFindBy(id = "buttonTest")
 	MobileElement ENbutton;
 	
+	@AndroidFindBy(id = "button1")
+	MobileElement iAgreeButton;
+	
+	@AndroidFindBy(id = "button2")
+	MobileElement noButton;
+	
 	@AndroidFindBy(id = "startUserRegistration")
 	MobileElement registrationButton;
 	
@@ -29,6 +35,27 @@ public class HomeScreen extends CreateSession{
 	
 	@AndroidFindBy(id = "waitingButtonTest")
 	MobileElement showProgressBarforAwhileButton;
+	
+	@AndroidFindBy(id = "input_adds_check_box")
+	MobileElement checkBox;
+	
+	@AndroidFindBy(id = "visibleButtonTest")
+	MobileElement displayTextViewButton;
+	
+	@AndroidFindBy(id = "showToastButton")
+	MobileElement displayToastButton;
+	
+	@AndroidFindBy(id = "exceptionTestButton")
+	MobileElement exceptionButton;
+	
+	@AndroidFindBy(id = "exceptionTestField")
+	MobileElement exceptionTextField;
+	
+	@AndroidFindBy(id = "topLevelElementTest")
+	MobileElement focusLayoutButton;
+	
+	@AndroidFindBy(id = "touchTest")
+	MobileElement touchActionsButton;
 	 
 	public HomeScreen(AndroidDriver<MobileElement> driver) {
 		CreateSession.driver=driver;
