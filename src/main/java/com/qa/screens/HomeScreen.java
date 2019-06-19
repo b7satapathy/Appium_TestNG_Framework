@@ -25,7 +25,7 @@ public class HomeScreen extends CreateSession{
 	MobileElement iAgreeButton;
 	
 	@AndroidFindBy(id = "button2")
-	MobileElement noButton;
+	MobileElement declineButton;
 	
 	@AndroidFindBy(id = "startUserRegistration")
 	MobileElement registrationButton;
@@ -65,4 +65,21 @@ public class HomeScreen extends CreateSession{
 	public boolean isENbuttonEnabled() {
 		return ENbutton.isEnabled();
 	}
+	
+	public void clickOnENbuttonAndDecline() {
+		ENbutton.click();
+		declineButton.click();
+		//verify toast message "Activity will continue"
+	}
+	
+	public void clickOnRegistrationButtonAndNavigateBack() {
+		registrationButton.click();
+		driver.hideKeyboard();
+		driver.navigate().back();
+	}
+	
+	
+	
+	
+	
 }
