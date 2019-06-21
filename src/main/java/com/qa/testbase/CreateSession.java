@@ -63,8 +63,8 @@ public class CreateSession {
 	}
 
 	public void startServer() {
-		CommandLine cmd = new CommandLine("C:\\Program Files (x86)\\nodejs\\node.exe");
-		cmd.addArgument("C:\\Users\\Vypar-Techie\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js");
+		CommandLine cmd = new CommandLine("F:\\Z_Personal_Projects\\nodeJSPath\\node.exe");
+		cmd.addArgument("C:\\Users\\ASUS\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js");
 		cmd.addArgument("--address");
 		cmd.addArgument("0.0.0.0");
 		cmd.addArgument("--port");
@@ -104,9 +104,9 @@ public class CreateSession {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
-		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
-		capabilities.setCapability("deviceName", "Emulators");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1");
+		capabilities.setCapability(MobileCapabilityType.UDID, "a49cce0a7d24");
+		capabilities.setCapability("deviceName", "Redmi 4");
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
 		capabilities.setCapability(MobileCapabilityType.APP, prop.getProperty("app"));
