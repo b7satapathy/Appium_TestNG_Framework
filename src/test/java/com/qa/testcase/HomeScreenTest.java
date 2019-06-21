@@ -22,15 +22,49 @@ public class HomeScreenTest extends CreateSession{
 
 	HomeScreen home;
 
+	
 	@Test(alwaysRun=true)
-	public void isENbuttonEnabled() {
+	public void clickOnENbuttonAndDecline() {
 		home = new HomeScreen(driver);
-		assertEquals(true, home.isENbuttonEnabled());
+		assertEquals(home.clickOnENbuttonAndDecline(), true);
+	}
+
+	@Test(dependsOnMethods={"clickOnENbuttonAndDecline"},alwaysRun=true)
+	public void clickOnRegistrationButtonAndNavigateBack() throws InterruptedException {
+		home = new HomeScreen(driver);
+		assertEquals(home.clickOnRegistrationButtonAndNavigateBack(), true);
+	}
+	
+	@Test(dependsOnMethods={"clickOnRegistrationButtonAndNavigateBack"},alwaysRun=true)
+	public void enterTextInTextBox() {
+		home = new HomeScreen(driver);
+		assertEquals(home.enterTextInTextBox(), "Appium Automation");
+	}
+	
+	@Test(dependsOnMethods={"enterTextInTextBox"},alwaysRun=true)
+	public void clickOnProgressBar() throws InterruptedException {
+		home = new HomeScreen(driver);
+		assertEquals(home.clickOnProgressBar(), true);
 	}
 	
 	
-
-	//@Test(dependsOnMethods={"clickOnTapToAddASaleButton"}, alwaysRun=true)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
