@@ -5,10 +5,17 @@
     <classes>
       <class name="com.qa.testcase.HomeScreenTest">
         <methods>
+          <include name="checkAndUncheckIAcceptAddsButton"/>
           <include name="stopAppiumServer"/>
+          <include name="getText"/>
+          <include name="clickOnGetToastButton"/>
+          <include name="clickOnENbuttonAndDecline"/>
+          <include name="clickOnProgressBar"/>
           <include name="startAppiumServer"/>
+          <include name="clickOnRegistrationButtonAndNavigateBack"/>
+          <include name="enterTextInTextBox"/>
+          <include name="switchToCanvas"/>
           <include name="closeApp"/>
-          <include name="isENbuttonEnabled"/>
           <include name="launchApp"/>
         </methods>
       </class> <!-- com.qa.testcase.HomeScreenTest -->

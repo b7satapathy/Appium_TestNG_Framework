@@ -54,6 +54,18 @@ public class GenericMethods extends CreateSession{
 
    }
 	
+	public void drawAline() {
+		Dimension screenSize = driver.manage().window().getSize();
+		int startX = (int) (161);
+		int startY = (int) (281);
+		int endX = (int) (558);
+		int endY = (int) (950);
+
+		action = new TouchAction(driver);
+		action.press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(3000)))
+				.moveTo(PointOption.point(endX, endY)).release().perform();
+	}
+	
 	public String getTodaysDate() {
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");

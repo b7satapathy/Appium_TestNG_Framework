@@ -1,33 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="10" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="57095" started-at="2019-06-21T17:28:48Z" finished-at="2019-06-21T17:29:45Z">
+  <suite name="Default suite" duration-ms="53247" started-at="2019-06-22T14:40:24Z" finished-at="2019-06-22T14:41:17Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="57095" started-at="2019-06-21T17:28:48Z" finished-at="2019-06-21T17:29:45Z">
+    <test name="Default test" duration-ms="53247" started-at="2019-06-22T14:40:24Z" finished-at="2019-06-22T14:41:17Z">
       <class name="com.qa.testcase.HomeScreenTest">
-        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:com.qa.testcase.HomeScreenTest@706a04ae]" name="startAppiumServer" is-config="true" duration-ms="10030" started-at="2019-06-21T17:28:38Z" finished-at="2019-06-21T17:28:48Z">
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="startAppiumServer" is-config="true" duration-ms="10049" started-at="2019-06-22T14:40:14Z" finished-at="2019-06-22T14:40:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startAppiumServer -->
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.qa.testcase.HomeScreenTest@706a04ae]" name="launchApp" is-config="true" duration-ms="54922" started-at="2019-06-21T17:28:48Z" finished-at="2019-06-21T17:29:43Z">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="launchApp" is-config="true" duration-ms="18980" started-at="2019-06-22T14:40:24Z" finished-at="2019-06-22T14:40:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="isENbuttonEnabled()[pri:0, instance:com.qa.testcase.HomeScreenTest@706a04ae]" name="isENbuttonEnabled" duration-ms="802" started-at="2019-06-21T17:29:43Z" finished-at="2019-06-21T17:29:44Z">
+        <test-method status="PASS" signature="clickOnENbuttonAndDecline()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="clickOnENbuttonAndDecline" duration-ms="1996" started-at="2019-06-22T14:40:43Z" finished-at="2019-06-22T14:40:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- isENbuttonEnabled -->
-        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.qa.testcase.HomeScreenTest@706a04ae]" name="closeApp" is-config="true" duration-ms="1298" started-at="2019-06-21T17:29:44Z" finished-at="2019-06-21T17:29:45Z">
+        </test-method> <!-- clickOnENbuttonAndDecline -->
+        <test-method status="PASS" signature="clickOnRegistrationButtonAndNavigateBack()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="clickOnRegistrationButtonAndNavigateBack" duration-ms="5594" started-at="2019-06-22T14:40:45Z" depends-on-methods="com.qa.testcase.HomeScreenTest.clickOnENbuttonAndDecline" finished-at="2019-06-22T14:40:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnRegistrationButtonAndNavigateBack -->
+        <test-method status="PASS" signature="enterTextInTextBox()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="enterTextInTextBox" duration-ms="949" started-at="2019-06-22T14:40:51Z" depends-on-methods="com.qa.testcase.HomeScreenTest.clickOnRegistrationButtonAndNavigateBack" finished-at="2019-06-22T14:40:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterTextInTextBox -->
+        <test-method status="PASS" signature="clickOnProgressBar()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="clickOnProgressBar" duration-ms="17821" started-at="2019-06-22T14:40:52Z" depends-on-methods="com.qa.testcase.HomeScreenTest.enterTextInTextBox" finished-at="2019-06-22T14:41:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnProgressBar -->
+        <test-method status="PASS" signature="checkAndUncheckIAcceptAddsButton()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="checkAndUncheckIAcceptAddsButton" duration-ms="2546" started-at="2019-06-22T14:41:10Z" depends-on-methods="com.qa.testcase.HomeScreenTest.clickOnProgressBar" finished-at="2019-06-22T14:41:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAndUncheckIAcceptAddsButton -->
+        <test-method status="PASS" signature="getText()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="getText" duration-ms="1377" started-at="2019-06-22T14:41:12Z" depends-on-methods="com.qa.testcase.HomeScreenTest.checkAndUncheckIAcceptAddsButton" finished-at="2019-06-22T14:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getText -->
+        <test-method status="PASS" signature="clickOnGetToastButton()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="clickOnGetToastButton" duration-ms="212" started-at="2019-06-22T14:41:14Z" depends-on-methods="com.qa.testcase.HomeScreenTest.getText" finished-at="2019-06-22T14:41:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnGetToastButton -->
+        <test-method status="FAIL" signature="switchToCanvas()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="switchToCanvas" duration-ms="2299" started-at="2019-06-22T14:41:14Z" depends-on-methods="com.qa.testcase.HomeScreenTest.clickOnGetToastButton" finished-at="2019-06-22T14:41:16Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'BISWAJIT', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: src\main\java\com\qa\app\se..., appPackage: io.selendroid.testapp, appWaitActivity: io.selendroid.testapp.HomeS..., appWaitPackage: io.selendroid.testapp, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: src\main\java\com\qa\app\se..., appWaitActivity: io.selendroid.testapp.HomeS..., appWaitPackage: io.selendroid.testapp, autoGrantPermissions: true, automationName: uiautomator2, deviceName: Redmi 4, fullReset: false, noReset: true, platformName: android, platformVersion: 7.1, udid: a49cce0a7d24}, deviceApiLevel: 25, deviceManufacturer: Xiaomi, deviceModel: Redmi 4, deviceName: a49cce0a7d24, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: a49cce0a7d24, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 50, takesScreenshot: true, udid: a49cce0a7d24, viewportRect: {height: 1230, left: 0, top: 50, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: bc594d02-2e98-4134-a50a-df3e8f881a22]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Swipe did not complete successfully
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'BISWAJIT', ip: '192.168.1.9', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: src\main\java\com\qa\app\se..., appPackage: io.selendroid.testapp, appWaitActivity: io.selendroid.testapp.HomeS..., appWaitPackage: io.selendroid.testapp, autoGrantPermissions: true, automationName: uiautomator2, databaseEnabled: false, desired: {app: src\main\java\com\qa\app\se..., appWaitActivity: io.selendroid.testapp.HomeS..., appWaitPackage: io.selendroid.testapp, autoGrantPermissions: true, automationName: uiautomator2, deviceName: Redmi 4, fullReset: false, noReset: true, platformName: android, platformVersion: 7.1, udid: a49cce0a7d24}, deviceApiLevel: 25, deviceManufacturer: Xiaomi, deviceModel: Redmi 4, deviceName: a49cce0a7d24, deviceScreenDensity: 320, deviceScreenSize: 720x1280, deviceUDID: a49cce0a7d24, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: true, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 7.1.2, statBarHeight: 50, takesScreenshot: true, udid: a49cce0a7d24, viewportRect: {height: 1230, left: 0, top: 50, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: bc594d02-2e98-4134-a50a-df3e8f881a22
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at io.appium.java_client.PerformsTouchActions.performTouchAction(PerformsTouchActions.java:41)
+at io.appium.java_client.TouchAction.perform(TouchAction.java:187)
+at com.qa.testbase.GenericMethods.drawAline(GenericMethods.java:66)
+at com.qa.screens.HomeScreen.switchToCanvas(HomeScreen.java:148)
+at com.qa.testcase.HomeScreenTest.switchToCanvas(HomeScreenTest.java:83)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- switchToCanvas -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="closeApp" is-config="true" duration-ms="1400" started-at="2019-06-22T14:41:16Z" finished-at="2019-06-22T14:41:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method status="PASS" signature="stopAppiumServer()[pri:0, instance:com.qa.testcase.HomeScreenTest@706a04ae]" name="stopAppiumServer" is-config="true" duration-ms="85" started-at="2019-06-21T17:29:46Z" finished-at="2019-06-21T17:29:46Z">
+        <test-method status="PASS" signature="stopAppiumServer()[pri:0, instance:com.qa.testcase.HomeScreenTest@402a079c]" name="stopAppiumServer" is-config="true" duration-ms="27" started-at="2019-06-22T14:41:18Z" finished-at="2019-06-22T14:41:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
       </class> <!-- com.qa.testcase.HomeScreenTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

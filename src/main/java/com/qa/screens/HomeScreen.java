@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.qa.testbase.CreateSession;
+import com.qa.testbase.GenericMethods;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -46,8 +47,14 @@ public class HomeScreen extends CreateSession{
 	@AndroidFindBy(id = "visibleButtonTest")
 	MobileElement displayTextViewButton;
 	
+	@AndroidFindBy(id = "visibleTextView")
+	MobileElement visibleText;
+	
 	@AndroidFindBy(id = "showToastButton")
 	MobileElement displayToastButton;
+	
+	@AndroidFindBy(id = "showPopupWindowButton")
+	MobileElement PopupWindowButton;
 	
 	@AndroidFindBy(id = "exceptionTestButton")
 	MobileElement exceptionButton;
@@ -61,8 +68,11 @@ public class HomeScreen extends CreateSession{
 	@AndroidFindBy(id = "touchTest")
 	MobileElement touchActionsButton;
 	
-	@AndroidFindBy(id = "inputUsername")
-	MobileElement userName;
+	@AndroidFindBy(id = "gesture_type_text_view")
+	MobileElement gestureText;
+	
+	@AndroidFindBy(id = "canvas_button")
+	MobileElement canvasButton;
 	
 	
 	 
@@ -80,7 +90,8 @@ public class HomeScreen extends CreateSession{
 	
 	public boolean clickOnRegistrationButtonAndNavigateBack() throws InterruptedException {
 		registrationButton.click();
-		driver.hideKeyboard();
+		Thread.sleep(2000);
+		driver.navigate().back();
 		Thread.sleep(2000);
 		driver.navigate().back();
 		return registrationButton.isEnabled();
@@ -100,19 +111,44 @@ public class HomeScreen extends CreateSession{
 		return showProgressBarforAwhileButton.isEnabled();
 	}
 	
+	public boolean checkAndUncheckIAcceptAddsButton() throws InterruptedException {
+		checkBox.click();
+		Thread.sleep(1000);
+		checkBox.click();
+		Thread.sleep(1000);
+		return checkBox.isSelected();
+	}
 	
+	public String getText() throws InterruptedException {
+		displayTextViewButton.click();
+		Thread.sleep(1000);
+		return visibleText.getText();
+	}
 	
+	public void clickOnGetToastButton() {
+		displayToastButton.click();
+	}
 	
+	public void clickOnDisplayPopUpWindowButton() {
+		PopupWindowButton.click();
+		driver.switchTo().alert().dismiss();
+	}
 	
+	public String touchActions() {
+		touchActionsButton.click();
+		GenericMethods gm = new GenericMethods();
+		gm.rightSwipe();
+		return gestureText.getText();
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void switchToCanvas() {
+		touchActionsButton.click();
+		canvasButton.click();
+		GenericMethods gm = new GenericMethods();
+		gm.drawAline();
+		driver.navigate().back();
+		driver.navigate().back();
+	}
 	
 	
 	

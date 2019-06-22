@@ -47,17 +47,41 @@ public class HomeScreenTest extends CreateSession{
 		assertEquals(home.clickOnProgressBar(), true);
 	}
 	
+	@Test(dependsOnMethods={"clickOnProgressBar"},alwaysRun=true)
+	public void checkAndUncheckIAcceptAddsButton() throws InterruptedException {
+		home = new HomeScreen(driver);
+		assertEquals(home.checkAndUncheckIAcceptAddsButton(), false);
+	}
 	
+	@Test(dependsOnMethods={"checkAndUncheckIAcceptAddsButton"},alwaysRun=true)
+	public void getText() throws InterruptedException {
+		home = new HomeScreen(driver);
+		assertEquals(home.getText(), "Text is sometimes displayed");
+	}
 	
+	@Test(dependsOnMethods={"getText"},alwaysRun=true)
+	public void clickOnGetToastButton() throws InterruptedException {
+		home = new HomeScreen(driver);
+		home.clickOnGetToastButton();
+	}
 	
+	@Test(enabled=false)
+	public void clickOnDisplayPopUpWindowButton() throws InterruptedException {
+		home = new HomeScreen(driver);
+		home.clickOnDisplayPopUpWindowButton();
+	}
 	
+	@Test(enabled=false)
+	public void touchActions() throws InterruptedException {
+		home = new HomeScreen(driver);
+		assertEquals(home.touchActions(), "FLICK");
+	}
 	
-	
-	
-	
-	
-	
-	
+	@Test(dependsOnMethods={"clickOnGetToastButton"},alwaysRun=true)
+	public void switchToCanvas() throws InterruptedException {
+		home = new HomeScreen(driver);
+		home.switchToCanvas();
+	}
 	
 	
 	
