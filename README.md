@@ -219,5 +219,9 @@ Example : in.android.test/in.android.test.HomeActivity
 	
 	This tessdata will contain “eng.traineddata” for reading english text. 
 	
+## Other FAQ's
 
+### 1- Error related to your SSH Key While cloning the repository, Go through this blog
+
+https://www.genuinecoder.com/how-to-fix-permission-denied-publickey-issue-in-gitlab/
 	
