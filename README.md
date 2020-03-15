@@ -160,8 +160,15 @@ Inside Path add following location
 	>git init
 	
 	>git clone <repo_url>
-	
-### 3- Inside CreateSession class Change this paths as per your local system
+
+## Eclipse Setup
+
+1) Import the folder into Eclipse
+2) Install TestNg
+   https://marketplace.eclipse.org/content/testng-eclipse
+3) Right click on the project and Select Convert to TestNG
+
+### Inside CreateSession class Change this paths as per your local system
 
 ### main.js path
 
@@ -171,8 +178,6 @@ Inside Path add following location
 
 	C:\Program Files (x86)\nodejs
 	
-    
-
 ### to link your eclipse project to git repo
 
 1- eclipse-> window -> showview -> other -> git -> git repositories -> open
