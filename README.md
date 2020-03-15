@@ -159,9 +159,7 @@ Inside Path add following location
 
 	>git init
 	
-	>git remote add <repo_url>
-	
-	>git pull origin master
+	>git clone <repo_url>
 	
 ### 3- Inside CreateSession class Change this paths as per your local system
 
