@@ -56,20 +56,17 @@
 
 
 
-
-
-# Important tasks before setting up project
+## Important tasks before setting up project
 
 ### 1- Download and setup 
 
 	java jdk 8
 	eclipse IDE
 	Git Bash
-	Microsoft .Net Framework 4.5.1 or above (if not installed)
-	Node  (if not installed)
+	Microsoft .Net Framework 4.5.1 or above
+	Node
 	
-
-### 2- Appium
+### 2- Appium Installation
 
 1- Install Appium through node command prompt
 
@@ -91,55 +88,94 @@
 	
 ### 3- Android SDK Manager
 
-If android studio is already anstalled, Android SDK Manager comes bundled with it
+If Android studio is already installed, Android SDK Manager comes bundled with it
 
-Else download Android SDK Manager from the following link
+Open Android Studio, Go to tools and select SDK Manager,
+Change Android SDK location to C:\android_sdk folder
 
-	https://dl.google.com/android/installer_r24.4.1-windows.exe?utm_source=androiddevtools.cn&utm_medium=website
+### Make sure latest version of following files are downloaded using SDK Manager.
+
+1) Android SDK Build Tools
+2) Android SDK Command line Tools
+3) Android Emulator
+4) Android SDK Platform tools
+5) Intel x86 Emulator Accelator (HAXM installer)
+6) Build Tools
+
+### In new downloads of Android Studio, SDK Tools is missing in SDK Manager
+
+So in this case we have to download previous version of SDK Manager with SDK Tools
+
+1) Download SDK Manager 
+
+google this -> installer_r24.4.1-windows.exe
+or open following URL
+https://dl.google.com/android/installer_r24.4.1-windows.exe?utm_source=androiddevtools.cn&utm_medium=website
+
+2) Install the file ( in a separate folder not in C:\android_sdk folder) 
+3) Now SDK Manager window will open, Check Only Build Tools and download the file, uncheck everything else except Build Tools
+4) Copy the Tools folder and paste it inside C:\android_sdk folder
+5) Now Build Tools will show in SDK Manager of Android Studio (Update it)
+6) Now uninstall Sdk Build tools from control panel
+
+### Set Up Environment Variable
+
+Create ANDROID_HOME  -> C:\android_sdk
+
+Inside Path add following location
+1) C:\android_sdk\tools
+2) C:\android_sdk\tools\bin
+3) C:\android_sdk\build-tools
+4) C:\android_sdk\platform-tools
+5) C:\android_sdk\cmdline-tools\latest\bin
+6) C:\android_sdk\cmdline-tools\latest\lib
+7) C:\android_sdk\emulator
+8) C:\android_sdk
+
 	
-Or google this 
+## Verify installation has done correctly
 
-	installer_r24.4.1-windows.exe	
+1) Connect a device through USB or open an emulator device
+    
+   Open Terminal and type
+   
+###   > adb devices
+   
+   This should show the connected device ID   
+   
+2) 	Open Terminal and type
+   
+###   > uiautomatorviewer
 	
-### 4- To lunch android sdk manager
-
-	>android
+  This is used To open UiAutomatorViewer to spy/ locate android UI elements
 	
-### 5- To lunch AVD manager
-
-	>android avd
-	
-### 6- To open UiAutomatorViewer to spy/ locate android UI elements
-
-	>uiautomatorviewer
-	
-If this does not work, go to this path and run the batch file
+    If this does not work, go to this path and run the batch file
 
 	C:\androidSdk(local android sdk folder)\tools\bin\uiautomatorviewer.bat
 	
-# Steps to setup project in your local system:
+## Steps to setup project in your local system:
 
 1- create a folder with any name and right click inside it and select Git bash here
 
 	>git init
 	
-	>git remote add origin <repository URL>
+	>git remote add <repo_url>
 	
 	>git pull origin master
 	
-3- Inside CreateSession class Change this paths as per your local system
+### 3- Inside CreateSession class Change this paths as per your local system
 
-main.js path
+### main.js path
 
 	C:\Users\userName(your local system name)\AppData\Roaming\npm\node_modules\appium\build\lib
 
-node.exe path
+### node.exe path
 
 	C:\Program Files (x86)\nodejs
 	
     
 
-# to link your eclipse project to git repo
+### to link your eclipse project to git repo
 
 1- eclipse-> window -> showview -> other -> git -> git repositories -> open
 
@@ -156,24 +192,22 @@ node.exe path
 
 ### To know appPackage and appActivity
 
-open the app, open cmd
+Open the Test App in your Test Device, open Terminal and check the device is connected
 
-	>adb devices
+###	>adb devices
 
-List of devices attached
+[ Here List of devices attached will show, now check app activity and app package name
 
-a49cxx123xxx    device    [example]
+###	>adb shell
 
+###	>dumpsys window windows | grep -E ‘mCurrentFocus’
 
-	>adb shell
+Example : in.android.test/in.android.test.HomeActivity
 
-	>dumpsys window windows | grep -E ‘mCurrentFocus’
+            appPackage/appActivity
+            
 
-in.android.appName/in.android.appName.HomeActivity
-
-appPackage ____________ appActivity
-
-## To Read Toast message [Not implemented yet]
+### To Read Toast message
 
 	1.Need to add Tess4J dependency to maven project.
 	
