@@ -177,7 +177,18 @@ Inside Path add following location
 ### node.exe path
 
 	C:\Program Files (x86)\nodejs
-	
+
+### Update the path of debug apk 
+    
+## Eclipse Setup
+
+1) Import the folder
+2) Install TestNg
+    for version 6.14.3
+    https://dl.bintray.com/testng-team/testng-eclipse-release/updatesites/6.14.3.201902250526/
+3) Right click on the project and Select Convert to TestNG
+
+
 ### to link your eclipse project to git repo
 
 1- eclipse-> window -> showview -> other -> git -> git repositories -> open
