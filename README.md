@@ -167,6 +167,7 @@ Inside Path add following location
 2) Install TestNg for version 6.14.3
 https://dl.bintray.com/testng-team/testng-eclipse-release/updatesites/6.14.3.201902250526/
 3) Right click on the project and Select Convert to TestNG
+###4) Go to eclipse-> windows -preference - and turn off automatically find new update
 
 ### Inside CreateSession class Change this paths as per your local system
 
